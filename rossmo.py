@@ -10,32 +10,36 @@ nCols = 50
 
 #Known locations of committed crimes
 crime_locations = [
-    point.Point(26,25),
-    point.Point(50,13),
-    point.Point(53,41)
+    point.Point(3,53),
+    point.Point(10,24),
+    point.Point(30,10),
+    point.Point(40,46),
+    point.Point(45,29)
 ]
 
 #Constants to be fiddled with to get alternate heatmaps
 #buffer affects the size of the area around committed crimes that is unlikely
 #to be where the serial criminal lives
-#I'm unsure what f and g does but they affect how wide or narrow the hot zone is
+#f affects how quickly the likelihood decays beyond the buffer zone
+#g affects how quickly the likelihood decays within the buffer zone
 buffer = 10
 f = 2/3
 g = 3/4
 
 def main():
     aList = create_coord_list(nRows, nCols)
-    aList = rossmo_table(aList)
+    aList = rossmo_list(aList)
     aTable = create_coord_table(aList)
     fig, ax = plt.subplots(figsize=(11, 9))
     sb.heatmap(aTable, cmap="icefire")
+    ax.invert_yaxis()
     plt.show()
 
 # Creates a list to store cell coordinate locations
 def create_coord_list(nRows, nCols):
     aList = list()
-    for x in range(nRows):
-        for y in range(nCols):
+    for y in range(nRows):
+        for x in range(nCols):
             aList.append(point.Point(x,y))
     return aList
 
@@ -75,7 +79,7 @@ def rossmo_prob(crime_distances):
     return px
 
 #Given a list of cell coordinates, calculates likelihood for each cell
-def rossmo_table(coords):
+def rossmo_list(coords):
     aList = list()
     for coord in coords:
         crime_distances = crime_distance(coord, crime_locations)
