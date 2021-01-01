@@ -1,4 +1,4 @@
-#Criminal Residence Likelihood Heatmap Generator Using Rossmo's Formula
+# Criminal Residence Likelihood Heatmap Generator Using Rossmo's Formula
 
 Rossmo's formula was developed to find the likelihood of a serial criminalist's 
 home location given the location of known committed crimes. The formula is
@@ -28,12 +28,12 @@ Here are some sample heatmaps:
 
 ![Figure 1](/generated-images/Figure_1.png)
 
-Crime Locations: {  
-&nbsp;&nbsp;&nbsp;&nbsp;(3, 53),  
-&nbsp;&nbsp;&nbsp;&nbsp;(10, 24),  
-&nbsp;&nbsp;&nbsp;&nbsp;(30, 10),  
-&nbsp;&nbsp;&nbsp;&nbsp;(40, 46),  
-&nbsp;&nbsp;&nbsp;&nbsp;(45, 29)  
+Crime Locations: {
+(3, 53),
+(10, 24),
+(30, 10),
+(40, 46),
+(45, 29)
 }  
 B = 10  
 f = 2/3  
@@ -41,12 +41,12 @@ g = 3/4
 
 ![Figure 2](/generated-images/Figure_2.png)
 
-Crime locations: {  
-&nbsp;&nbsp;&nbsp;&nbsp;(6, 43),  
-&nbsp;&nbsp;&nbsp;&nbsp;(10, 34),  
-&nbsp;&nbsp;&nbsp;&nbsp;(30, 32),  
-&nbsp;&nbsp;&nbsp;&nbsp;(40, 36)  
-}  
+Crime locations: {
+(6, 43),
+(10, 34), 
+(30, 32),
+(40, 36)
+}
 B = 7  
 f = 3/5  
 g = 4/5  
