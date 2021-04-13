@@ -10,7 +10,7 @@ greater reward to make the crime worthwhile. In other words, criminals will
 commit crimes outside a certain area close to their home but there exists a 
 limit to how far they will travel before the effort becomes not worth it.
 
-![equation](CodeCogsEqn.png) 
+![equation](CodeCogsEqn.jpg) 
 
 Of course the limitations of this idea lie in the unpredictability  and diversity
 of serial criminal behavior. The assumptions made in Rossmo's formula are not
